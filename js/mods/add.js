@@ -17,12 +17,14 @@ return {
     p.appendChild(pText)
     var ptime = document.createElement('p');
     var now=new Date();
-    var ptime = document.createTextNode(now);
-
+    var ptimes = document.createTextNode(now);
+    ptime.appendChild(ptimes);
+    div.appendChild(ptime);
     div.appendChild(h1);
     div.appendChild(p);
     document.getElementById("notes").appendChild(div);
 },
+
 
   clearField:function(){ // clears fields
       var inputs = [];
@@ -48,6 +50,7 @@ return {
 editThisNote:function(positionNumber){
   array[positionNumber].title = newNoteTitle.value;
   array[positionNumber].text = newNoteText.value;
+  array[positionNumber].time = new Date();
   console.log(array);
  var find = document.getElementById(positionNumber);
  find.childNodes[0].innerText = newNoteTitle.value;

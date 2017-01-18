@@ -21,6 +21,7 @@ require(['add'],function(add){
      add.editThisNote(positionNumber.valueAsNumber);
      add.clearField();
      add.time();
+     
    }
    if(e.target.id == 'eraseNoteButton'){
     add.eraseNote(eraseposition.valueAsNumber);
