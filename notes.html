@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link href="notes.css" type="text/css" rel="stylesheet"/>
+    <script data-main="js/mods/notes.js" src="js/require.js"></script>
+
+  </head>
+  <body>
+    <h1 id="headtitle">Notes Application</h1>
+  <div class="buttons">
+    <div>
+      <form class="add">
+        <button id="addNoteButton" type="button">Add Note</button>
+        <input  id="title" placeholder="Title" type="text" class="inputs">
+        <input id="notetext" placeholder="Write Note Here"  type="textarea" class="inputs">
+      </form>
+    </div>
+    <div>
+      <button id='editNotesButton'> Edit Note </button>
+      <input id="position"type="number" placeholder='select Note'>
+      <input id="newNoteTitle"type="text"class="inputs" placeholder='Edit Title Here'>
+      <input id="newNoteText"type="textarea"class="inputs"placeholder='Edit Note Text Here'>
+    </div>
+    <div>
+      <button id='eraseNoteButton'>Erase A Note</button>
+      <input id="eraseposition" type="number" placeholder='select Note' >
+    </div>
+
+    <div>
+      <button id='hideButton'>Display/Hide Notes</button>
+    <div >
+      <button id='saveButton'>SAVE NOTES</button>
+    </div>
+
+  </div>
+    <div class="notes" id="notes">
+    </div>
+
+
+    </div>
+
+  </body>
+
+</html>

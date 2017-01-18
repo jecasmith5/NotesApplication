@@ -1,0 +1,46 @@
+body{
+  background-color: aqua;
+}
+h1{
+  text-align: center;
+}
+.notes{
+ width: 100%;
+ background-color: black;
+ float: right;
+}
+.add{
+  background-color: black;
+  color: aqua;
+}
+button{
+  background-color: black;
+  color: aqua;
+  width: 30%;
+  height: 50%;
+  padding: 20px;
+}
+.buttons{
+  background-color: black;
+
+}
+.note{
+  background-color: yellow;
+    height: 200px;
+    margin:10px;
+    width: 20%;
+    float: left;
+}
+input{
+  height: 30px;
+  background-color: grey;
+}
+.eraseNote {
+  float: right;
+}
+#saveButton {
+  background-color: red;
+}
+#hideButton{
+
+}
