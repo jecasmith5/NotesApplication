@@ -1,8 +1,11 @@
 body{
-  background-color: aqua;
+  background-color: black;
 }
 h1{
   text-align: center;
+}
+#headtitle{
+  color: white;
 }
 .notes{
  width: 100%;
@@ -13,19 +16,17 @@ h1{
   background-color: black;
   color: aqua;
 }
-button{
-  background-color: black;
-  color: aqua;
-  width: 30%;
-  height: 50%;
-  padding: 20px;
-}
+
 .buttons{
   background-color: black;
 
 }
+button .dButton{
+  height:4px;
+  width:8px;
+}
 .note{
-  background-color: yellow;
+  background-color: #F0E68C;
     height: 200px;
     margin:10px;
     width: 20%;
