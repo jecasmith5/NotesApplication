@@ -78,13 +78,11 @@ return {
             minutes = "0" + minutes;
           }
           nownew = (month + "/" + day  + "/" + year+ " " + hours + ":" + minutes);
-          var nownew=document.createElement('p')
-          li.appendChild(nownew);
+          var nownewl=document.createElement('p')
+          li.appendChild(nownewl);
         li.childNodes[0].innerText=noteTitle.value;
         li.childNodes[1].innerText=noteText.value;
         li.childNodes[2].innerText=now;
-        li.childNodes[4].innerText=new Date();
-
         li.childNodes[5].innerText=nownew;
 
         var index = array.length;
