@@ -1,5 +1,6 @@
 body{
-  background-image: url('background.jpg') no-repeat;
+  background-image: url('back.jpeg');
+  background-size: cover;
 }
 h1{
   text-align: center;
@@ -7,44 +8,42 @@ h1{
 }
 h3{
   text-align: center;
-  color: black;
+  color: white;
 }
 #headtitle{
-  color: black;
+  color: white;
 }
 .notes{
  width: 100%;
- background-image: url('background.jpg');
+ height: 100%;
+ background-image: url('board.jpeg');
  float: right;
 }
-.add{
-  background-color: black;
-  color: aqua;
-}
+
 #notediv{
   height: 100%;
-  width: 50;
+  width: 100%;
 }
-.buttons{
-  background-color: black;
-}
+
 button .dButton{
   height:4px;
   width:8px;
 }
 #container{
-  background-color: white;
 }
 .note{
   background-color: #F0E68C;
     margin:5px;
     float: left;
+    height:300px;
+    width:175px;
 }
 
 input{
-  height: 30px;
+  height: 40px;
   background-color: grey;
   font-size: 32px;
+  border: 3px solid white;
 }
 textarea{
   background-color: grey;
@@ -52,9 +51,14 @@ textarea{
   height: 100px;
   resize: none;
   font-size: 32px;
+  border: 3px solid white;
+
+}
+ul{
+  list-style: none;
 }
 #saveButton {
-  background-color: white;
+  background-color: grey;
 }
 #hideButton{
 

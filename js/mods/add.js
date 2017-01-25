@@ -6,7 +6,16 @@ define([],function(){
 return {
   addObjects:function(){
 
-    var now=new Date();
+    var now=  edittime= new Date(),
+        day = now.getDate(),
+        month = now.getMonth() + 1,
+        year = now.getFullYear();
+        hours = now.getHours(),
+        minutes = now.getMinutes();
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        now = (month + "/" + day  + "/" + year+ " " + hours + ":" + minutes);
     var myObject = {
       title:noteTitle.value,
       text:noteText.value,
@@ -27,7 +36,16 @@ return {
     var pText = document.createTextNode(noteText.value);
     p.appendChild(pText)
     var ptime = document.createElement('p');
-    var now=new Date();
+    var now=new Date(),
+      day = now.getDate(),
+      month = now.getMonth() + 1,
+      year = now.getFullYear();
+      hours = now.getHours(),
+      minutes = now.getMinutes();
+      if (minutes < 10) {
+        minutes = "0" + minutes;
+      }
+      now = (month + "/" + day  + "/" + year+ " " + hours + ":" + minutes);
     var ptimes = document.createTextNode(now);
     ptime.appendChild(ptimes);
     li.appendChild(h1);
@@ -50,9 +68,25 @@ return {
       saveButton.onclick= function ok(){
         var newtime = document.createElement('p');
         li.appendChild(newtime);
+        var nownew=new Date(),
+          day = nownew.getDate(),
+          month = nownew.getMonth() + 1,
+          year = nownew.getFullYear();
+          hours = nownew.getHours(),
+          minutes = nownew.getMinutes();
+          if (minutes < 10) {
+            minutes = "0" + minutes;
+          }
+          nownew = (month + "/" + day  + "/" + year+ " " + hours + ":" + minutes);
+          var nownew=document.createElement('p')
+          li.appendChild(nownew);
         li.childNodes[0].innerText=noteTitle.value;
         li.childNodes[1].innerText=noteText.value;
-        li.childNodes[5].innerText=new Date();
+        li.childNodes[2].innerText=now;
+        li.childNodes[4].innerText=new Date();
+
+        li.childNodes[5].innerText=nownew;
+
         var index = array.length;
            console.log(index);
            var position=array[li.id]
@@ -60,7 +94,7 @@ return {
            position.text=li.childNodes[1].innerText;
            position.time=li.childNodes[2].innerText=new Date();
            console.log(array);
-           
+
            noteTitle.value=" ";
            noteText.value = " ";
       }
@@ -150,7 +184,16 @@ return {
               li.childNodes[4].innerText=new Date();
               var edittime=document.createElement('p')
               li.appendChild(edittime);
-              edittime= new Date();
+              var edittime= new Date(),
+                day = now.getDate(),
+                month = now.getMonth() + 1,
+                year = now.getFullYear();
+                hours = now.getHours(),
+                minutes = now.getMinutes();
+                if (minutes < 10) {
+                  minutes = "0" + minutes;
+                }
+                now = (month + "/" + day  + "/" + year+ " " + hours + ":" + minutes);
               var index = array.length;
                  console.log(index);
                  localStorage.setItem("savedData", JSON.stringify(array));
@@ -165,7 +208,6 @@ return {
                  //reset placeholders
                  noteTitle.value=" ";
                  noteText.value = " ";
-
             }
           }
           var deleteButton = document.createElement('button');
@@ -183,11 +225,8 @@ return {
             localStorage.removeItem(array[i]);
 
 
+            }
           }
+        }
       }
-
-  }
-
-
-     }
    })
