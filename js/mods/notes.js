@@ -5,9 +5,10 @@ require(['add'],function(add){
  var newNoteText=document.getElementById('newNoteText');
  var saveButton=document.getElementById('saveButton');
  var hideButton=document.getElementById('hidebutton');
-
+ var array=[];
 //automatically get info from local storage and populates notes
-add.localStorage();
+add.localStorageOnLoad();
+
 
  buttons.addEventListener('click', function(e){
 
@@ -15,11 +16,11 @@ add.localStorage();
      add.addNote();
      add.addObjects();
      add.clearField();
-
+     add.localStorageSave();
    }
-   if (e.target.id == 'saveButton') {
-     add.localStorage();
-   }
+    if (e.target.id == 'saveButton') {
+      add.localStorageSave();
+    }
    if (e.target.id == 'hideButton') {
      add.showHideDiv(document.getElementById('notes'));
 }

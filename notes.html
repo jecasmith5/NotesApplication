@@ -12,22 +12,30 @@
   <div class="buttons">
     <div>
       <form class="add">
-        <button id="addNoteButton" type="button">Add Note</button>
+      <div id='container'>
+        <h3>*To Create A New Note: Enter The Title And Description Below*</h3>
+      <div>
         <input  id="title" placeholder="Title" type="text" class="inputs">
-        <input id="notetext" placeholder="Write Note Here"  type="textarea" class="inputs">
-      </form>
+      </div>
+      <div>
+        <span><textarea id="notetext" placeholder="Write Note Here" type="textarea" row='4' col="30" class="inputs"></textarea></span>
+      </div>
     </div>
+    <button id="addNoteButton" type="button">Click Here To Add A Note</button>
+
+      </form>
     <div>
       <button id='hideButton'>Display/Hide Notes</button>
-    <div >
+    <div>
       <button id='saveButton'>SAVE NOTES</button>
     </div>
-
+</div>
   </div>
-    </div>
+</div>
+<div id='notediv'>
     <ul class="notes" id="notes">
     </ul>
-
+</div>
   </body>
 
 </html>

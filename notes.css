@@ -1,46 +1,60 @@
 body{
-  background-color: black;
+  background-image: url('background.jpg') no-repeat;
 }
 h1{
   text-align: center;
+  color: black;
+}
+h3{
+  text-align: center;
+  color: black;
 }
 #headtitle{
-  color: white;
+  color: black;
 }
 .notes{
  width: 100%;
- background-color: black;
+ background-image: url('background.jpg');
  float: right;
 }
 .add{
   background-color: black;
   color: aqua;
 }
-
+#notediv{
+  height: 100%;
+  width: 50;
+}
 .buttons{
   background-color: black;
-
 }
 button .dButton{
   height:4px;
   width:8px;
 }
+#container{
+  background-color: white;
+}
 .note{
   background-color: #F0E68C;
-    height: 200px;
-    margin:10px;
-    width: 20%;
+    margin:5px;
     float: left;
 }
+
 input{
   height: 30px;
   background-color: grey;
+  font-size: 32px;
 }
-.eraseNote {
-  float: right;
+textarea{
+  background-color: grey;
+  width: 100%;
+  height: 100px;
+  resize: none;
+  font-size: 32px;
 }
 #saveButton {
-  background-color: red;
+  background-color: white;
 }
 #hideButton{
 
