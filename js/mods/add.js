@@ -8,7 +8,7 @@ return {
     document.getElementById("popp").addEventListener("click", function(){
     document.getElementById("poppup").style.display = "block";
     console.log('hi');
-    noteTitletitle.setAttribute('placeholder','Title');
+    noteTitle.setAttribute('placeholder','Title');
     noteText.setAttribute('placeholder','Description');
 })
 },
@@ -107,8 +107,8 @@ return {
            position.time=li.childNodes[2].innerText;
            console.log(array);
 
-           noteTitle.value="";
-           noteText.value = "";
+           noteTitle.value='';
+           noteText.value = '';
       }
     }
     var deleteButton = document.createElement('button');
@@ -134,7 +134,7 @@ return {
       var inputs = [];
       inputs = document.getElementsByClassName('inputs');
       for (var i = 0; i < inputs.length; i++) {
-        inputs[i].value = " ";
+        inputs[i].value = "";
       }
     },
 
