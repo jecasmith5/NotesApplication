@@ -8,6 +8,7 @@ require(['add'],function(add){
  var array=[];
 //automatically get info from local storage and populates notes
 add.localStorageOnLoad();
+add.popup();
 
 
  buttons.addEventListener('click', function(e){
@@ -17,9 +18,12 @@ add.localStorageOnLoad();
      add.addObjects();
      add.clearField();
      add.localStorageSave();
+     document.getElementById("poppup").style.display = "none";
+
    }
     if (e.target.id == 'saveButton') {
       add.localStorageSave();
+
     }
    if (e.target.id == 'hideButton') {
      add.showHideDiv(document.getElementById('notes'));
